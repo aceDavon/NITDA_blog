@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react"
 import react_log from "../assets/react.svg"
+import { Link } from "react-router-dom"
+
 export function AllPosts() {
   const [posts, setPosts] = useState([])
 
@@ -9,7 +11,6 @@ export function AllPosts() {
       .then((data) => setPosts(data))
   }, [])
 
-  console.log(posts)
   return (
     <>
       <div className="container">
@@ -44,9 +45,13 @@ export function AllPosts() {
                 </thead>
                 <tbody>
                   {posts.map((post, index) => (
-                    <tr key={index}>
+                    <tr className="post-rows" key={index}>
                       <td>{post.id}</td>
-                      <td>{post.title}</td>
+                      <td>
+                        <Link to={`/posts/${post.id}/post`} state={{ post }}>
+                          {post.title}
+                        </Link>
+                      </td>
                       <td>{post.userId}</td>
                       <td>{post.body}</td>
                     </tr>

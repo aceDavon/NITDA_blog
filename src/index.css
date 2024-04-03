@@ -81,3 +81,7 @@ td {
   font-size: smaller;
   font-style: oblique;
 }
+
+.post-rows {
+  cursor: pointer;
+}

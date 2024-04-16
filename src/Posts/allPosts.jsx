@@ -34,16 +34,16 @@ export function AllPosts() {
           </div>
           <div className="post-container">
             <div className="post-table-container">
-              <table>
+              <table className="posts_table">
                 <thead>
                   <tr>
-                    <td>s/no</td>
-                    <td>title</td>
-                    <td>user id</td>
-                    <td>description</td>
+                    <th>s/no</th>
+                    <th>title</th>
+                    <th>user id</th>
+                    <th>description</th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody className="posts-table-body">
                   {posts.map((post, index) => (
                     <tr className="post-rows" key={index}>
                       <td>{post.id}</td>

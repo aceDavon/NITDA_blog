@@ -17,6 +17,10 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route element={<EditPost />} path="edit/:postId/post" />
           <Route element={<AllPosts />} path="delete/:postId/post" />
         </Route>
+        <Route path="comments">
+          <Route element={<></>} path=':postId/comments' />
+          <Route path=':commentId/comment' element={<></>} />
+        </Route>
       </Route>
     </Routes>
   </BrowserRouter>

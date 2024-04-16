@@ -66,8 +66,21 @@ table thead {
   width: 100%;
 }
 
+.posts_table thead > tr {
+  background-color: #dedede;
+}
+
+th {
+  padding: 4px 0;
+  text-transform: capitalize;
+}
+
 tr {
   border: 1.5px solid black;
+}
+
+.posts-table-body tr:nth-child(even) {
+  background-color: #dedede;
 }
 
 td {

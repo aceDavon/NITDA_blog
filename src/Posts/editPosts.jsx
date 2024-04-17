@@ -1,5 +1,6 @@
 export function EditPost() {
-  return <>
+  return <div className="edit-post-container">
     This is the edit section
-  </>
+    this is the modal
+  </div>
 }

@@ -98,3 +98,69 @@ td {
 .post-rows {
   cursor: pointer;
 }
+
+.single-post-container {
+  position: relative;
+  display: flex;
+  margin: 50px 0;
+  flex-direction: column;
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit-post-container {
+  position: absolute;
+  background: rgb(244, 244, 246);
+  width: 450px;
+  height: 150px;
+  top: 50px;
+  border-radius: 12px;
+  box-shadow: 2px 2px 2px #f3f3f367;
+}
+
+.post-header {
+  text-align: center;
+  font-weight: 800;
+  font-size: larger;
+  letter-spacing: 2px;
+}
+
+.post-body {
+  width: 45%;
+  margin: 25px auto;
+  text-align: center;
+  font-size: medium;
+  font-weight: lighter;
+}
+
+.post-id {
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: xx-large;
+  color: blue;
+  font-weight: bolder;
+  font-style: oblique;
+  text-align: center;
+}
+
+.post-btn-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 45%;
+  margin: auto;
+}
+
+.delete-btn,
+.edit-btn {
+  padding: 6px 12px;
+  color: red;
+  border: 1px solid red;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.edit-btn {
+  color: green;
+  border: 1px solid green;
+}

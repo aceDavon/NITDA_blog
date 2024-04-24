@@ -145,11 +145,9 @@ td {
 }
 
 .post-btn-container {
-  display: flex;
-  justify-content: space-evenly;
-  width: 45%;
-  margin: auto;
+  text-align: right;
 }
+
 
 .delete-btn,
 .edit-btn {
@@ -164,3 +162,103 @@ td {
   color: green;
   border: 1px solid green;
 }
+
+.single-post-container {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.post-header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.post-body {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.post-id {
+  font-size: 14px;
+  color: #666;
+}
+
+.post-btn-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.delete-btn,
+.edit-btn {
+  padding: 10px 20px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #f44336; /* Red */
+  color: #fff;
+  font-size: 16px;
+}
+
+.edit-btn {
+  background-color: #358e6f; /* Blue */
+}
+
+.delete-btn:hover,
+.edit-btn:hover {
+  opacity: 0.8;
+}
+
+.single-post-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Existing styles unrelated to modal and edit button */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: #fff;
+  width: 60%;
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  color: #aaa;
+}
+
+/* Apply blur effect to elements behind the modal when it's open */
+body.modal-open .blur-effect {
+  filter: blur(2px); /* Apply blur effect */
+  pointer-events: none; /* Disable pointer events */
+}
+

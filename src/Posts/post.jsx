@@ -18,7 +18,7 @@ export function Post() {
   };
 
   return (
-    <div className="container">
+    <div className="mt-10">
       <div className="single-post-container">
         <div className="post-content">
           <div className="post-header">{state.post.title}</div>

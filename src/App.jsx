@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom"
 function App() {
   return (
     <>
-      <div className="container">
+      <div className="w-full">
         <div className="header"></div>
         <div className="page-content">
           <div className="sidebar"></div>

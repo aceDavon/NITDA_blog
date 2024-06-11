@@ -13,47 +13,52 @@ export function AllPosts() {
 
   return (
     <>
-      <div className="container">
-        <div className="top-header">
-          <div className="logo-section">
+      <div className="w-full">
+        {/* Header component */}
+        <div className="flex justify-between items-center px-2 py-6 shadow-md shadow-slate-100">
+          {/* logo section */}
+          <div className="flex items-center space-x-2">
             <img src={react_log} alt="logo" />
             <span>Posts Blog</span>
           </div>
-          <div className="top-nav">
-            <ul className="list">
-              <li className="list-item">Home</li>
-              <li className="list-item">About</li>
-              <li className="list-item">Comments</li>
-              <li className="list-item">FAQs</li>
+          {/* navigation section */}
+          <div>
+            <ul className="flex space-x-2">
+              <li className="cursor-pointer">Home</li>
+              <li className="cursor-pointer">About</li>
+              <li className="cursor-pointer">Comments</li>
+              <li className="cursor-pointer">FAQs</li>
             </ul>
           </div>
         </div>
-        <div className="post-section">
-          <div className="post-label">
-            <h1>All Posts</h1>
+        {/* main component body */}
+        <div className="flex flex-col space-y-4 mt-8">
+          {/* posts header */}
+          <div className="grid place-items-center w-full">
+            <h1 className="font-semibold text-4xl">All Posts</h1>
           </div>
-          <div className="post-container">
-            <div className="post-table-container">
-              <table className="posts_table">
-                <thead>
-                  <tr>
-                    <th>s/no</th>
-                    <th>title</th>
-                    <th>user id</th>
-                    <th>description</th>
+          <div className="w-full">
+            <div className="mx-auto w-2/3">
+              <table className="table">
+                <thead className="w-full">
+                  <tr className="w-full">
+                    <th className="w-16 text-center">s/no</th>
+                    <th className="w-1/3 text-center">title</th>
+                    <th className="w-16 text-center">user id</th>
+                    <th className="w-1/3 text-center">description</th>
                   </tr>
                 </thead>
-                <tbody className="posts-table-body">
+                <tbody className="">
                   {posts.map((post, index) => (
-                    <tr className="post-rows" key={index}>
-                      <td>{post.id}</td>
-                      <td>
+                    <tr className="border-b-2" key={index}>
+                      <td className="text-center py-4">{post.id}</td>
+                      <td className="text-center py-4">
                         <Link to={`/posts/${post.id}/post`} state={{ post }}>
                           {post.title}
                         </Link>
                       </td>
-                      <td>{post.userId}</td>
-                      <td>{post.body}</td>
+                      <td className="text-center py-4">{post.userId}</td>
+                      <td className="text-center py-4">{post.body}</td>
                     </tr>
                   ))}
                 </tbody>
